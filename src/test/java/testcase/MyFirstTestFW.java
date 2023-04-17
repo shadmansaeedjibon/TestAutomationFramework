@@ -5,11 +5,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import utilities.ReadXLSdata;
 
 public class MyFirstTestFW extends BaseTest {
 	
 	
-@Test(dataProvider="testdata")
+@Test(dataProviderClass=ReadXLSdata.class,dataProvider="bvtdata") 
 public static void LoginTest(String username, String password) throws InterruptedException
 
 {
@@ -26,7 +27,7 @@ public static void LoginTest(String username, String password) throws Interrupte
 	
 	}
 
-    @DataProvider(name="testdata")
+ /*    @DataProvider(name="testdata")
     public Object [][] tdata()
     
     {
@@ -37,7 +38,7 @@ public static void LoginTest(String username, String password) throws Interrupte
     		{"bonrootnext@gmail.com","Ur@12323445678"},	
     		{"jibonrootnt@gmail.com","Ur@12365645678"}	
     	};
-    }
+    }*/
 
 }
 	
